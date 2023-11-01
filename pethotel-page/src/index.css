@@ -1,0 +1,81 @@
+/* Global, reset & typography */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input {
+  cursor: pointer;
+  font: inherit;
+  transition: 0.3s;
+  border: 1px solid lightgray;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+:root {
+  --main-font: "Rubik", sans-serif;
+
+  /* ## Colors */
+  /* ### Primary */
+
+  --cs-green: #7fcb8f;
+  --cs-yellow: #ffde82;
+  --cs-light-brown: #c9a74e;
+  --cs-dark-brown: #907419;
+  --cs-pale-bg: #e8e9da;
+  --cs-dark-green: #003908;
+  --cs-main-bg: #F5F5F5;
+
+}
+
+html {
+  font-family: var(--main-font);
+  font-size: 10px;
+}
+
+body {
+  position: relative;
+  display: grid;
+  min-height: 100svh;
+  min-height: 100vh;
+  background-color: var(--cs-main-bg);
+}
+
+html,
+body {
+  /* overflow-x: hidden; */
+  min-width: 30rem;
+}
+
+/* Utility classes */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
