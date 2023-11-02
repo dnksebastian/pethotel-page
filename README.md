@@ -13,10 +13,10 @@ This is a portfolio project - an example of company business page for a pet hote
 - **Responsive Design:**
   - Ensures compatibility across various devices.
 
- - **Contact form:**
+- **Contact form:**
   - Mock contact form with validation.
 
- - **Image carousel:**
+- **Image carousel:**
   - Photo gallery as a carousel.
 
 ## Technologies Used

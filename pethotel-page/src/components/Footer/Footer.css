@@ -1,0 +1,115 @@
+footer {
+    position: relative;
+    padding: 1rem;
+    display: grid;
+    gap: 2rem;
+    /* grid-template-columns: 10rem 1fr 10rem; */
+    /* grid-template-rows: 1fr 2rem; */
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    align-items: center;
+    justify-items: center;
+    background-color: var(--cs-dark-green);
+    color: var(--cs-dark-brown);
+}
+
+footer::before {
+    position: absolute;
+    content: "";
+    /* width: 100%; */
+    height: 9rem;
+    width: 100%;
+    top:0;
+    left: 0;
+    transform: translateY(-100%);
+    background-image: url(../../assets//images/wave.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 102%;
+    background-position: bottom -.5rem center;
+    /* background-color: red; */
+}
+
+.ft-logo-wrapper {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: flex-end;
+    gap: .5rem
+}
+
+.ft-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    font-size: 1.5rem;
+}
+
+.ft-menu-link {
+    color: inherit;
+    display: block;
+    min-width: 8rem;
+    padding: .5rem;
+    text-align: center;
+}
+
+.ft-menu-link:hover, .ft-menu-link:focus-visible {
+    color: var(--cs-light-brown);
+}
+
+
+.ft-social {
+    display: flex;
+    gap: .7rem;
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+.ft-social-icon {
+    color: var(--cs-dark-brown);
+    transition: .3s;
+}
+
+.ft-social-icon:hover,
+.ft-social-icon:focus {
+    color: var(--cs-light-brown);
+}
+
+
+.copyright {
+    grid-row: 4/5;
+    grid-column: 1/2;
+}
+
+@media screen and (min-width: 600px) {
+    footer {
+        grid-template-columns: max-content 1fr max-content;
+        grid-template-rows: auto;
+    }
+
+    .ft-logo-wrapper {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        padding-bottom: 1rem;
+    }
+
+    .ft-menu {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        flex-direction: row;
+    }
+
+    .ft-social {
+        grid-column: 3/4;
+        grid-row: 1/2;
+    }
+
+    .copyright {
+        grid-column: 1/4;
+        grid-row: 2/3;
+    }
+}
