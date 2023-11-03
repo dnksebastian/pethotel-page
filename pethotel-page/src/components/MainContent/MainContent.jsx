@@ -4,6 +4,7 @@ import Hero from '../Hero/Hero'
 import Offer from '../Offer/Offer'
 import About from '../About/About'
 import Contact from '../Contact/Contact'
+import Questions from '../FAQ/Questions'
 
 const MainContent = () => {
     
@@ -12,6 +13,7 @@ const MainContent = () => {
             <Hero />
             <Offer />
             <About />
+            <Questions />
             <Contact />
         </main>
     )
