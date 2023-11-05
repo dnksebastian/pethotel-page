@@ -1,0 +1,36 @@
+#aboutus {
+    background-color: rgba(238, 130, 238, 0.515);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    max-width: 35rem;
+}
+
+.about-desc-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    gap: 1rem;
+}
+
+.about-heading {
+    font-size: 1.85rem;
+    color: var(--cs-dark-brown);
+}
+
+.about-desc {
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: var(--cs-dark-green);
+}
+
+/* #aboutus + * {
+    max-width: 35rem;
+} */
+
+.gallery-wrap {
+    border: 1px solid red;
+    max-width: 25rem;
+}

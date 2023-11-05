@@ -17,9 +17,9 @@ const Offer = () => {
             </div>
             <div className="offer-tabs-helper">
                 <div className="tab-controls-wrap">
-                    <button id="btn-offer-1" onClick={() => setActiveTab(1)}>Hotel</button>
-                    <button id="btn-offer-2" onClick={() => setActiveTab(2)}>Training</button>
-                    <button id="btn-offer-3" onClick={() => setActiveTab(3)}>Daycare</button>
+                    <button className={`service-tab-btn ${activeTab === 1 ? 'btn-hl' : ''}`} id="btn-offer-1" onClick={() => setActiveTab(1)}>Hotel</button>
+                    <button className={`service-tab-btn ${activeTab === 2 ? 'btn-hl' : ''}`} id="btn-offer-2" onClick={() => setActiveTab(2)}>Training</button>
+                    <button className={`service-tab-btn ${activeTab === 3 ? 'btn-hl' : ''}`} id="btn-offer-3" onClick={() => setActiveTab(3)}>Daycare</button>
                 </div>
                 <ul className="tab-cards-wrap">
                     <li className={`tab-card-wrap ${activeTab === 1 ? 'show-tab' : ''}`}>
