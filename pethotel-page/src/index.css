@@ -45,7 +45,7 @@ ol {
   --cs-dark-green: #003908;
   --cs-main-bg: #F5F5F5;
   --cs-shadow: hsla(128, 100%, 11%, 0.2);
-
+  --cs-btn-bg: hsla(128, 100%, 11%, 0.6);
 }
 
 html {
