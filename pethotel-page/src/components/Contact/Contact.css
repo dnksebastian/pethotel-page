@@ -2,9 +2,9 @@
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    align-items: center;
+    /* align-items: center; */
     max-width: 35rem;
-    background-color: teal;
+    /* background-color: teal; */
     margin-bottom: 5rem;
 }
 
@@ -28,9 +28,12 @@
 }
 
 .form-wrapper {
+    padding: 1rem;
+    border-radius: .7rem;
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
+    background-color: var(--cs-pale-bg);
 }
 
 .form-wrapper > * {
@@ -58,6 +61,31 @@
     grid-template-rows: repeat(3, max-content);
 }
 
+.input-label {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--cs-dark-green);
+}
+
+.contact-input,
+.msg-area {
+    font: inherit;
+    border: none;
+    border-radius: .7rem;
+    color: var(--cs-dark-green);
+    outline: none;
+    font-size: 1.3rem;
+}
+
+.contact-input:focus,
+.msg-area:focus {
+    box-shadow: 0rem .5rem .7rem .2rem var(--cs-shadow);
+}
+
+.contact-input {
+    padding: .5rem 1rem;
+}
+
 .input-message-helper {
     display: grid;
     gap: .5rem;
@@ -68,10 +96,35 @@
 .msg-area {
     grid-row: 2/3;
     resize: none;
+    padding: .5rem;
+}
+
+.input-error,
+.input-message-error {
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: var(--cs-error);
 }
 
 .input-message-error {
     grid-row: 3/4;
+}
+
+#contact-submit, #close-sc-btn {
+    max-width: 12rem;
+    font-size: 1.8rem;
+    padding: .5rem 1.2rem;
+    border: none;
+    border-radius: 1rem;
+    color: var(--cs-light-brown);
+    background-color: var(--cs-dark-green);
+    align-self: center;
+}
+
+#contact-submit:hover, #contact-submit:focus-visible,
+#close-sc-btn:hover, #close-sc-btn:focus-visible {
+    color: var(--cs-dark-green);
+    background-color: var(--cs-light-brown);
 }
 
 .success-view {
@@ -80,10 +133,24 @@
     align-items: center;
     justify-content: center;
     gap: 2rem;
-    background-color: var(--cs-main-bg);
+    border-radius: .7rem;
+    background-color: var(--cs-pale-bg);
     z-index: 10;
     animation: displayInfo .5s ease-in;
 }
+
+.success-heading {
+    font-size: 2rem;
+    color: var(--cs-dark-brown);
+}
+
+.success-msg {
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: var(--cs-dark-green);
+}
+
 
 @keyframes displayInfo {
     from {
@@ -92,4 +159,32 @@
     to {
         opacity: 100;
     }
+}
+
+
+@media screen and (min-width: 875px) {
+    #contact {
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 5rem;
+        align-items: center;
+        max-width: unset;
+    }
+
+    #contact > * {
+        max-width: 45rem;
+    }
+
+    .contact-heading {
+        font-size: 2.3rem;
+    }
+
+    .contact-desc {
+        font-size: 1.5rem;
+    }
+
+    .form-wrapper {
+        min-width: 45rem;
+    }
+
 }

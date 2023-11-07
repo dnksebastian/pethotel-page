@@ -46,6 +46,7 @@ ol {
   --cs-main-bg: #F5F5F5;
   --cs-shadow: hsla(128, 100%, 11%, 0.2);
   --cs-btn-bg: hsla(128, 100%, 11%, 0.6);
+  --cs-error: hsla(0, 54%, 50%, 0.8);
 }
 
 html {

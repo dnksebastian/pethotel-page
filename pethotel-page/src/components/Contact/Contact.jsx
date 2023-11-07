@@ -41,17 +41,17 @@ const Contact = () => {
                     <div className="inputs-wrap">
                     <div className="input-helper">
                         <label htmlFor="contact-name" className="input-label">Name:</label>
-                        <input id='contact-name' name='contact-name' type="text" {...register("cName", { required: true })} />
+                        <input className='contact-input' id='contact-name' name='contact-name' type="text" {...register("cName", { required: true })} placeholder='John Doe'/>
                         {errors.cName && <p className="input-error">error</p>}
                     </div>
                     <div className="input-helper">
                         <label htmlFor="contact-email" className="input-label">Email:</label>
-                        <input id='contact-email' name='contact-email' type="email" {...register("cEmail", { required: true })}/>
+                        <input className='contact-input' id='contact-email' name='contact-email' type="email" {...register("cEmail", { required: true })} placeholder='john.doe@email.com'/>
                         {errors.cEmail && <p className="input-error">error</p>}
                     </div>
                     <div className="input-message-helper">
                         <label htmlFor="contact-message" className="input-label">Message:</label>
-                        <textarea className='msg-area' name="contact-message" id="contact-message" cols="30" rows="10" placeholder='Your message...' {...register("cMessage", { required: true })}></textarea>
+                        <textarea className='msg-area' name="contact-message" id="contact-message" rows="10" placeholder='Your message...' {...register("cMessage", { required: true })}></textarea>
                         {errors.cMessage && <p className="input-message-error">error</p>}
                     </div>
                     </div>
@@ -60,7 +60,7 @@ const Contact = () => {
                 {showSuccess && <div className="success-view">
                     <h2 className="success-heading">Thank you{successObj.name ? `, ${successObj.name}` : ''}!</h2>
                     <p className="success-msg">We will get back to you ass son as possible!</p>
-                    <button onClick={() => {setShowSuccess(false)}}>Ok!</button>
+                    <button id='close-sc-btn' onClick={() => {setShowSuccess(false)}}>Ok</button>
                 </div>}
             </div>
         </section>

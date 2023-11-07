@@ -1,5 +1,4 @@
 #aboutus {
-    /* background-color: rgba(238, 130, 238, 0.515); */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,14 +25,6 @@
     color: var(--cs-dark-green);
 }
 
-/* #aboutus + * {
-    max-width: 35rem;
-} */
-
-/* .gallery-wrap {
-    padding: 1rem;
-    border: 1px solid green;
-} */
 
 .embla {
     padding: 1rem;
@@ -116,6 +107,14 @@
 
     #aboutus > * {
         max-width: 45rem;
+    }
+
+    .about-heading {
+        font-size: 2.3rem;
+    }
+
+    .about-desc {
+        font-size: 1.5rem;
     }
 
     .gallery-wrap {
