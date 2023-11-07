@@ -1,0 +1,118 @@
+#questions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    max-width: 35rem;
+}
+
+.faq-desc-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    gap: 1rem;
+}
+
+.faq-heading {
+    font-size: 1.85rem;
+    color: var(--cs-dark-brown);
+}
+
+.faq-desc {
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: var(--cs-dark-green);
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.faq-element {
+    display: flex;
+    flex-direction: column;
+    padding: .5rem;
+    border-bottom: 1px solid var(--cs-dark-green) ;
+    gap: .5rem;
+    transition: max-height .3s ease-out;
+    overflow: hidden;
+}
+
+.question-helper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5rem;
+    cursor: pointer;
+}
+
+.faq-question {
+    pointer-events: none;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: var(--cs-dark-brown);
+}
+
+.faq-marker-wrap {
+    pointer-events: none;
+    transition: .3s ease-in;
+    color: var(--cs-dark-green);
+}
+
+.faq-active .faq-marker-wrap {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0rem;
+    transition: max-height .6s cubic-bezier(0, 1, 0, 1);
+    overflow: hidden;
+    color: var(--cs-dark-green);
+    text-align: justify;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    padding: 0rem 2.5rem 0rem .5rem;
+}
+
+.faq-active .faq-answer {
+    max-height: 25rem;
+    transition: max-height 1s ease-in-out;
+}
+
+#faq-btn {
+    max-width: 12rem;
+    font-size: 1.8rem;
+    padding: .5rem 1rem;
+    border: none;
+    border-radius: 1rem;
+    color: var(--cs-light-brown);
+    background-color: var(--cs-dark-green);
+}
+
+#faq-btn:hover,
+#faq-btn:focus-visible {
+    color: var(--cs-dark-green);
+    background-color: var(--cs-light-brown);
+}
+
+
+@media screen and (min-width: 875px) {
+    #questions {
+        max-width: unset;
+    }
+    
+    #questions > * {
+        max-width: 45rem;
+    }
+}
+
+@media screen and (min-width: 1175px) {
+    #questions {
+        background-image: url(../../assets/images/blob.svg), url(../../assets//images/blob-sm.svg);
+        background-repeat: no-repeat;
+        background-position: top -2rem left, bottom -2rem right;
+        background-size: 30rem, 20rem;
+    }
+}
