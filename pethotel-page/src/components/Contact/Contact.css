@@ -82,6 +82,12 @@
     box-shadow: 0rem .5rem .7rem .2rem var(--cs-shadow);
 }
 
+.contact-input[aria-invalid="true"],
+.msg-area[aria-invalid="true"] {
+    color: var(--cs-error);
+    box-shadow: 0rem .4rem 0rem -.2rem var(--cs-error);
+}
+
 .contact-input {
     padding: .5rem 1rem;
 }
